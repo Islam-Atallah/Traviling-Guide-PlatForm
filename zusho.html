@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {box-sizing: border-box}
+        body {font-family: Verdana, sans-serif; margin:0;
+            background: #f2f2f2;
+        }
+        .animate-charcter
+        {
+            text-transform: uppercase;
+            background-image: linear-gradient(
+                    -225deg,
+                    lightcoral 0%,
+                    burlywood 29%,
+                    coral 67%,
+                    black 100%
+            );
+            background-size: auto auto;
+            background-clip: border-box;
+            background-size: 200% auto;
+            color: #fff;
+            background-clip: text;
+            text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 1s linear infinite;
+            display: inline-block;
+            font-size: 50px;
+            width: 900px;
+        }
+        @keyframes textclip {
+            to {
+                background-position: 200% center;
+            }
+        }
+        .mySlides1 {display: none;
+            margin-left :10%;
+            margin-top: 10px;
+        }
+        img {vertical-align: middle;
+            length: 300px;
+            margin-top: 70px;
+            height: 170px;
+            width: 500px;}
+
+        /* Slideshow container */
+        .slideshow-container1 {
+            max-width: 1000px;
+            position: relative;
+            margin-right: 80%;
+            margin-bottom: 5px;
+
+
+        }
+
+        /* Next & previous buttons */
+        .prev1, .next1 {
+            cursor: pointer;
+            position: absolute;
+
+
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+
+        .next1 {
+            right:0px;
+            border-radius: 3px 0 0 10px;
+            top : 150px;
+        }
+
+
+        .prev1{
+            top : 100px;
+            left: 42px;
+        }
+        /* On hover, add a black background color with a little bit see-through */
+        .prev1:hover, .next1:hover {
+            background-color: #525151;
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+
+        /* The dots/bullets/indicators */
+        .dot1 {
+            cursor: pointer;
+            height: 10px;
+            width: 10px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 80%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+
+        .active, .dot1:hover {
+            background-color: #717171;
+        }
+
+
+
+        /* Fading animation */
+
+        /* On smaller screens, decrease text size */
+        .mn1{
+            text-align: center;
+            margin-top: -10%;
+        }
+
+
+        .lo1{
+            margin-top: -150px;
+            margin-right: -700px;
+
+        }
+
+
+        .checked1 {
+            color: orange;
+
+
+        }
+        .ch1{
+            margin-top: -140px;
+            margin-right: -1300px;
+
+        }
+        .r1{
+            margin-top: -15px;
+            margin-right: -175px;
+        }
+
+
+
+        .mySlides {display: none;
+            margin-left :10%;
+        }
+        img {vertical-align: middle;
+            length: 20px;}
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin-right: 80%;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+
+
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+
+        .next {
+            right:0px;
+            border-radius: 3px 0 0 10px;
+            top : 150px;
+        }
+
+
+        .prev{
+            top : 120px;
+            left: 42px;
+        }
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+            background-color: #525151;
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 10px;
+            width: 10px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 80%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+
+
+
+        /* Fading animation */
+
+        /* On smaller screens, decrease text size */
+        .mn{
+            text-align: center;
+            margin-top: -10%;
+        }
+
+
+        .lo{
+            margin-top: -170px;
+            margin-right: -700px;
+
+        }
+
+
+        .checked {
+            color: orange;
+
+
+        }
+        .ch{
+            margin-top: -170px;
+            margin-right: -1300px;
+
+        }
+        .r{
+            margin-top: -12px;
+            margin-right: -165px;
+        }
+
+        .mySlides2 {display: none;
+            margin-left :10%;
+
+        }
+        img {vertical-align: middle;
+            length: 20px;}
+
+        /* Slideshow container */
+        .slideshow-container2 {
+            max-width: 1000px;
+            position: relative;
+            margin-right: 80%;
+            margin-top: 2px;
+            margin-bottom: 5px;
+        }
+
+        /* Next & previous buttons */
+        .prev2, .next2 {
+            cursor: pointer;
+            position: absolute;
+
+
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+
+        .next2 {
+            right:0px;
+            border-radius: 3px 0 0 10px;
+            top : 140px;
+        }
+
+
+        .prev2{
+            top : 100px;
+            left: 42px;
+        }
+        /* On hover, add a black background color with a little bit see-through */
+        .prev2:hover, .next2:hover {
+            background-color: #525151;
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+
+        /* The dots/bullets/indicators */
+        .dot2 {
+            cursor: pointer;
+            height: 10px;
+            width: 10px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 80%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+
+        .active, .dot2:hover {
+            background-color: #717171;
+        }
+
+
+
+        /* Fading animation */
+
+        /* On smaller screens, decrease text size */
+        .mn2{
+            text-align: center;
+            margin-top: -10%;
+        }
+
+
+        .lo2{
+            margin-top: -160px;
+            margin-right: -700px;
+
+        }
+
+
+        .checked2 {
+            color: orange;
+
+
+        }
+        .ch2{
+            margin-top: -150px;
+            margin-right: -1300px;
+
+        }
+        .r2{
+            margin-top: -15px;
+            margin-right: -160px;
+        }
+
+
+        .mySlides3 {display: none;
+            margin-left :10%;
+        }
+        img {vertical-align: middle;
+            length: 20px;}
+
+        /* Slideshow container */
+        .slideshow-container3 {
+            max-width: 1000px;
+            position: relative;
+            margin-right: 80%;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        /* Next & previous buttons */
+        .prev3, .next3 {
+            cursor: pointer;
+            position: absolute;
+
+
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+
+        .next3 {
+            right:0px;
+            border-radius: 3px 0 0 10px;
+            top : 150px;
+        }
+
+
+        .prev3{
+            top : 100px;
+            left: 42px;
+        }
+        /* On hover, add a black background color with a little bit see-through */
+        .prev3:hover, .next3:hover {
+            background-color: #525151;
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+
+        /* The dots/bullets/indicators */
+        .dot3 {
+            cursor: pointer;
+            height: 10px;
+            width: 10px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 80%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+
+        .active, .dot3:hover {
+            background-color: #717171;
+        }
+
+
+
+        /* Fading animation */
+
+        /* On smaller screens, decrease text size */
+        .mn3{
+            text-align: center;
+            margin-top: -10%;
+        }
+
+
+        .lo3{
+            margin-top: -140px;
+            margin-right: -700px;
+
+        }
+
+
+        .checked3 {
+            color: orange;
+
+
+
+
+        }
+        .ch3{
+            margin-top: -120px;
+            margin-right: -1300px;
+
+        }
+        .r3{
+            margin-top: -155px;
+            margin-right: -160px;
+        }
+
+    </style>
+</head>
+<body>
+<center><h3 class=" animate-charcter " >  HOTEL BOOKING</h3></center>
+<div class="all" style="width: 1200px; margin: 0 auto; background:white; ">
+    <div class="slideshow-container1">
+
+        <div class="mySlides1 fade">
+
+            <img src="ima/210278822.jpg" style="width:100%">
+
+        </div>
+
+        <div class="mySlides1 fade">
+
+            <img src="ima/80316041.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides1 fade">
+
+            <img src="ima/346566590.jpg" style="width:100%">
+
+        </div>
+        <div class="mySlides1 fade">
+
+            <img src="ima/346553960.jpg" style="width:100%">
+
+        </div>
+        <div class="mySlides1 fade">
+
+            <img src="ima/210336704.jpg" style="width:100%">
+
+        </div>
+
+
+
+
+
+        <div class="mn1" style="text-align:center  ">
+            <span class="dot1" onclick="currentSlide1(1)"></span>
+            <span class="dot1" onclick="currentSlide1(2)"></span>
+            <span class="dot1" onclick="currentSlide1(3)"></span>
+            <span class="dot1" onclick="currentSlide1(4)"></span>
+            <span class="dot1" onclick="currentSlide1(5)"></span>
+
+
+
+
+
+            <a class="next1" onclick="plusSlides1(1)">></a>
+
+            <a style="color: coral"   href="https://www.tripadvisor.com/" >
+                <div class= "lo1"> <b> Mountain Breeze Lodge & Resort </b>  </div> </a>
+            <div class="ch1">
+                <span class="fa fa-star checked1"></span>
+                <span class="fa fa-star checked1"></span>
+                <span class="fa fa-star checked1"></span>
+                <span class="fa fa-star checked1"></span>
+                <span class="fa fa-star checked1 "></span>
+                <h6 class="r1">100 review</h6>
+                <h6 class="n1">Free wifi </h6>
+                <h6 class="n2 ">Parking </h6>
+                <h6 class="n3">Room service</h6>
+                <h6 class="n4">Bar/Lounge</h6>
+
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <hr>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+
+            <img src="ima/OIP999.jpg" style="width:100%">
+
+        </div>
+
+        <div class="mySlides fade">
+
+            <img src="ima/jj0l.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+
+            <img src="ima/hh78.jpg" style="width:100%">
+
+        </div>
+        <div class="mySlides fade">
+
+            <img src="ima/jj897.jpg" style="width:100%">
+
+        </div>
+        <div class="mySlides fade">
+
+            <img src="ima/jju7.jpg" style="width:100%">
+
+        </div>
+
+
+
+        <div class="mn" style="text-align:center  ">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+
+
+
+
+
+            <a class="next" onclick="plusSlides(1)">></a>
+
+            <a style="color: coral"  href="https://www.tripadvisor.com/" >
+                <div class= "lo"> <b>  Gerasa Hotel</b>  </div> </a>
+
+            <div class="ch">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star  "></span>
+                <h6 class="r">87 reviews</h6>
+                <h6>Parking</h6>
+                <h6> Free High Speed Internet (WiFi)</h6>
+                <h6>Restaurant</h6>
+                <h6>Airport transportation</h6>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <hr class="m1">
+    <div class="slideshow-container2">
+
+        <div class="mySlides2 fade">
+
+            <img src="ima/163862122.jpg" style="width:100%">
+
+        </div>
+
+        <div class="mySlides2 fade">
+
+            <img src="ima/A4O77tO5On0dGoQ480x360.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides2 fade">
+
+            <img src="ima/AQ5hgyPqYDN7JGg480x360.jpg" style="width:100%">
+
+        </div>
+        <div class="mySlides2 fade">
+
+            <img src="ima/88789640.jpg" style="width:100%">
+
+        </div>
+        <div class="mySlides2 fade">
+
+            <img src="ima/rre3jpg.jpg" style="width:100%">
+
+        </div>
+
+
+
+
+        <div class="mn2" style="text-align:center  ">
+            <span class="dot2" onclick="currentSlide2(1)"></span>
+            <span class="dot2" onclick="currentSlide2(2)"></span>
+            <span class="dot2" onclick="currentSlide2(3)"></span>
+            <span class="dot2" onclick="currentSlide2(4)"></span>
+            <span class="dot2" onclick="currentSlide2(5)"></span>
+
+
+
+
+
+            <a class="next2" onclick="plusSlides2(1)">></a>
+
+            <a  style="color: coral" href="https://www.tripadvisor.com/" >
+                <div class= "lo2"> <b> Sbar hotel </b>  </div> </a>
+            <div class="ch2">
+                <span class="fa fa-star checked2"></span>
+                <span class="fa fa-star checked2"></span>
+                <span class="fa fa-star checked2"></span>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star  "></span>
+                <h6 class="r2">55 review</h6>
+                <h6 class="n1">Free parking</h6>
+                <h6 class="n2 "> High speeed Wifi </h6>
+                <h6 class="n3">Coffe bar</h6>
+                <h6 class="n3">Swimming</h6>
+
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <hr>
+    <div class="slideshow-container3">
+
+        <div class="mySlides3 fade">
+
+            <img src="ima/337163876.jpg" style="width:100%">
+
+        </div>
+
+        <div class="mySlides3 fade">
+
+            <img src="ima/371683477.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides3 fade">
+
+            <img src="ima/337163861%20(1).jpg" style="width:100%">
+
+        </div>
+        <div class="mySlides3 fade">
+
+            <img src="ima/341553552%20(1).jpg" style="width:100%">
+
+        </div>
+        <div class="mySlides3 fade">
+
+            <img src="ima/AReH3r7GVD80UFA480x360.jpg" style="width:100%">
+
+        </div>
+
+
+
+
+
+
+        <div class="mn3" style="text-align:center  ">
+            <span class="dot3" onclick="currentSlide3(1)"></span>
+            <span class="dot3" onclick="currentSlide3(2)"></span>
+            <span class="dot3" onclick="currentSlide3(3)"></span>
+            <span class="dot3" onclick="currentSlide3(4)"></span>
+            <span class="dot3" onclick="currentSlide3(5)"></span>
+
+
+
+
+
+            <a class="next3" onclick="plusSlides3(1)">></a>
+
+            <a  style="color: coral" href="https://www.tripadvisor.com/" >
+                <div class= "lo3"> <b>    Al Joude Hotel</b>  </div> </a>
+            <div class="ch3">
+                <span class="fa fa-star checked3"></span>
+                <span class="fa fa-star checked3"></span>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star "></span>
+
+                <h6>Free breakfas</h6>
+                <h6 > Free Wifi </h6>
+                <h6 > area of engoying</h6>
+                <h6 class="r3">44 review</h6>
+
+            </div>
+
+        </div>
+    </div>
+
+    <br>
+
+
+</div>
+
+
+
+
+<script>
+    let slideIndex1 = 1;
+    showSlides1(slideIndex1);
+
+    function plusSlides1(n) {
+        showSlides1(slideIndex1 += n);
+    }
+
+    function currentSlide1(n) {
+        showSlides1(slideIndex1 = n);
+    }
+
+    function showSlides1(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides1");
+        let dots = document.getElementsByClassName("dot1");
+        if (n > slides.length) {slideIndex1 = 1}
+        if (n < 1) {slideIndex1 = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex1-1].style.display = "block";
+        dots[slideIndex1-1].className += " active";
+    }
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+    let slideIndex2 = 1;
+    showSlides2(slideIndex2);
+
+    function plusSlides2(n) {
+        showSlides2(slideIndex2 += n);
+    }
+
+    function currentSlide2(n) {
+        showSlides2(slideIndex2 = n);
+    }
+
+    function showSlides2(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides2");
+        let dots = document.getElementsByClassName("dot2");
+        if (n > slides.length) {slideIndex2 = 1}
+        if (n < 1) {slideIndex2 = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex2-1].style.display = "block";
+        dots[slideIndex2-1].className += " active";
+    }
+    let slideIndex3 = 1;
+    showSlides3(slideIndex3);
+
+    function plusSlides3(n) {
+        showSlides3(slideIndex3 += n);
+    }
+
+    function currentSlide3(n) {
+        showSlides3(slideIndex3 = n);
+    }
+
+    function showSlides3(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides3");
+        let dots = document.getElementsByClassName("dot3");
+        if (n > slides.length) {slideIndex3 = 1}
+        if (n < 1) {slideIndex3 = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex3-1].style.display = "block";
+        dots[slideIndex3-1].className += " active";
+    }
+</script>
+
+</body>
+</html>

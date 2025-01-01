@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body{
+      border: 100px ;
+      padding: 50px;
+      margin: 20px;
+      background: white;
+      margin: 20px;
+
+    }
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+    * {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      outline: none;
+      border: none;
+      text-decoration: none;
+      text-transform: capitalize;
+      -webkit-transition: all .2s linear;
+      transition: all .2s linear;
+    }
+
+    html {
+      font-size: 62.5%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      scroll-padding-top: 9rem;
+    }
+
+    html::-webkit-scrollbar {
+      width: 1rem;
+    }
+
+    html::-webkit-scrollbar-track {
+      background:#D3D3D3;
+    }
+
+    html::-webkit-scrollbar-thumb {
+      background:coral;
+      border-radius: 5rem;
+    }
+
+    body {
+      background: white;
+      overflow-x: hidden;
+    }
+
+    section {
+      padding: 3rem 9%;
+    }
+
+    .heading {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .heading span {
+      color: coral;
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .heading h1 {
+      font-size: 4rem;
+      color: black;
+    }
+
+
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: 	#505050;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding: 1.5rem 9%;
+    }
+
+    .header .navbar a {
+      font-size: 1.7rem;
+      color: white;
+      display: inline-block;
+      margin: 0 1rem;
+    }
+
+    .header .navbar a:hover {
+      color: coral;
+    }
+
+    .header .btn {
+      margin-top: 0;
+      margin-right:-120px;
+      margin-left:-180px;
+    }
+
+    .logo {
+      font-size: 2.5rem;
+      color: #fff;
+      font-weight: bolder;
+    }
+
+    .logo i {
+      color: coral;
+      padding-right: .5rem;
+    }
+
+    #menu-btn {
+      font-size: 2.5rem;
+      color: #fff;
+      cursor: pointer;
+      display: none;
+    }
+
+
+    .about {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 5rem;
+    }
+
+    .about .video-container {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 42rem;
+      flex: 1 1 42rem;
+    }
+
+    .about .video-container video {
+      border-radius: 1rem;
+      width: 100%;
+    }
+
+    .about .video-container .controls {
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    .about .video-container .controls span {
+      display: inline-block;
+      height: 2rem;
+      width: 2rem;
+      border-radius: 50%;
+      background: #A0A0A0;
+      cursor: pointer;
+      margin: .7rem;
+    }
+
+    .about .video-container .controls span:hover {
+      background: coral;
+    }
+
+    .about .content {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 42rem;
+      flex: 1 1 42rem;
+      margin-bottom: 5rem;
+    }
+
+    .about .content span {
+
+      color: coral;
+      font-size: 2rem;
+    }
+    about .content h2 {
+      color: black;
+      font-size: 4rem;
+      margin-top: .5rem;
+    }
+    .about .content h3 {
+      color: black;
+      font-size: 4rem;
+      margin-top: .5rem;
+    }
+
+    .about .content p {
+      padding: 1rem 0;
+      font-size: 1.4rem;
+      color: #aaa;
+      line-height: 2;
+    }
+
+    .footer{
+      margin-top: 430px;
+
+    }
+    .footer .box-container {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+      gap: 1.5rem;
+    }
+
+    .footer .box-container .box {
+      padding: 1rem 0;
+    }
+
+    .footer .box-container .box .logo {
+      padding-bottom: 1rem;
+    }
+
+    .footer .box-container .box h3 {
+      font-size: 2.2rem;
+      color: black;
+      padding: 1rem 0;
+    }
+
+    .footer .box-container .box p {
+      font-size: 1.4rem;
+      color: black;
+      padding: 1rem 0;
+      line-height: 2;
+    }
+
+    .footer .box-container .box p i {
+      padding-right: .5rem;
+      color:coral;
+    }
+
+    .footer .box-container .box .share {
+      padding-top: 1rem;
+    }
+
+    .footer .box-container .box .share a {
+      height: 4.5rem;
+      width: 4.5rem;
+      line-height: 4rem;
+      font-size: 2rem;
+      border-radius: 50%;
+      font-size: 1.7rem;
+      border: 0.2rem solid coral;
+      color: coral;
+      margin-right: .5rem;
+      text-align: center;
+    }
+
+    .footer .box-container .box .share a:hover {
+      background: coral;
+      color: #111;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .footer .box-container .box .links {
+      font-size: 1.4rem;
+      color: #aaa;
+      padding: 1rem 0;
+      display: block;
+    }
+
+    .footer .box-container .box .links:hover {
+      color: coral;
+    }
+
+    .footer .box-container .box .links:hover i {
+      padding-right: 2rem;
+    }
+
+    .footer .box-container .box .links i {
+      padding-right: .5rem;
+      color: coral;
+    }
+
+    .footer .box-container .box form .email {
+      width: 100%;
+      border-radius: 5rem;
+      border: 0.2rem solid coral;
+      background: none;
+      font-size: 1.5rem;
+      text-transform: none;
+      color: #aaa;
+      margin-bottom: 1rem;
+      padding: 1.2rem 1.4rem;
+    }
+
+    .credit {
+      background: #222;
+      text-align: center;
+      font-size: 2rem;
+      padding: 2rem 1rem;
+      color: #aaa;
+    }
+
+    .credit span {
+      color:coral;
+    }
+    .rating-box {
+      margin: auto;
+      width: 50%;
+      position: relative;
+      background: #fff;
+      padding: 25px 50px 35px;
+      border-radius: 25px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    }
+    .rating-box header {
+      font-size: 22px;
+      color: gray;
+      font-weight: 500;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .rating-box .stars {
+      margin: auto;
+      width: 50%;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+    .stars i {
+      color: #e6e6e6;
+      font-size: 35px;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+    .stars i.active {
+      color: #ff9c1a;
+    }
+
+    .btn {
+      margin-top: 1rem;
+      display: inline-block;
+      padding: 1rem 3rem;
+      font-size: 1.7rem;
+      color: coral;
+      border: 0.2rem solid coral;
+      border-radius: 5rem;
+      cursor: pointer;
+
+      background: none;
+    }
+
+    .btn:hover {
+      background: coral;
+      color: white;
+    }
+    @media (max-width: 991px) {
+      html {
+        font-size: 55%;
+      }
+      .header {
+        padding: 1.5rem 2rem;
+      }
+      section {
+        padding: 3rem 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #menu-btn {
+        display: inline-block;
+      }
+      .header .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: #222;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      }
+      .header .navbar.active {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+      .header .navbar a {
+        margin: 2rem;
+        font-size: 2rem;
+        display: block;
+      }
+      .home {
+        margin-top: 10rem;
+      }
+      .home .content span {
+        font-size: 8vw;
+      }
+      .home .content h3 {
+        font-size: 9vw;
+      }
+    }
+
+    @media (max-width: 450px) {
+      html {
+        font-size: 50%;
+      }
+      .about .content h3 {
+        font-size: 3.5rem;
+      }
+      .banner .content h3 {
+        font-size: 2.7rem;
+      }
+    }
+
+
+
+
+
+    .mySlides {display: none}
+    img {vertical-align: middle;
+      length: 300px;
+      margin-top: 70px;
+      height: 550px;
+      width: 1000px;}
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+      margin-top: -20px;
+      margin-left: -80px;
+    }
+
+
+
+    /* Next & previous buttons */
+
+
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: coral;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    img {vertical-align: middle;
+      length: 300px;
+      margin-top: 70px;
+      height: 550px;
+      width: 500px;}
+
+
+
+    .learnBtn
+    {
+      margin-top: 1rem;
+      display: inline-block;
+      padding: 1rem 3rem;
+      font-size: 1.7rem;
+      color: coral;
+      border: 0.2rem solid coral;
+      border-radius: 5rem;
+      background: none;
+
+    }
+
+    .learnBtn:hover {
+      background: coral;
+      color: white;
+    }
+
+    .non_visible_text{
+
+
+
+      margin: 12px;
+
+      display: none;
+
+      color:coral;
+      font-style:italic;
+    }
+    .visible_text
+    {
+      color: #bbbbbb;
+      font-style: oblique;
+      font-family: "Inter Semi Bold";
+    }
+
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .prev, .next,.text {font-size: 11px}
+    }
+    .lk{
+      margin-top:20px ;
+      margin-left:800px ;
+      width: 450px;
+
+    }
+    .jj{
+
+      margin-top: -560px;
+    }
+
+    .animate-charcter
+    {
+
+      font-size: 50px;
+
+      text-transform: uppercase;
+      background-image: linear-gradient(
+              -225deg,
+              lightcoral 0%,
+              burlywood 29%,
+              coral 67%,
+              black 100%
+      );
+      background-size: auto auto;
+      background-clip: border-box;
+      background-size: 200% auto;
+      color: #fff;
+      background-clip: text;
+      text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textclip 1s linear infinite;
+      display: inline-block;
+      font-size: 50px;
+    }
+
+    @keyframes textclip {
+      to {
+        background-position: 200% center;
+      }
+    }
+    .j{
+      margin-top: 15px;
+      margin-left: -560px;
+    }
+  </style>
+</head>
+<body>
+<header class="header">
+
+  <div id="menu-btn" class="fas fa-bars"></div>
+
+  <a data-aos="zoom-in-left" data-aos-delay="150" href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#" class="logo aos-init aos-animate"> <i class="fas fa-suitcase-rolling"></i>travel </a>
+
+  <nav class="navbar">
+    <a data-aos="zoom-in-left" data-aos-delay="300" href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#home" class="aos-init aos-animate">home</a>
+    <a data-aos="zoom-in-left" data-aos-delay="450" href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#about" class="aos-init aos-animate">about</a>
+    <a data-aos="zoom-in-left" data-aos-delay="600" href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#destination" class="aos-init aos-animate">destination</a>
+    <a data-aos="zoom-in-left" data-aos-delay="750" href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#services" class="aos-init aos-animate">services</a>
+    <a data-aos="zoom-in-left" data-aos-delay="900" href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#gallery" class="aos-init aos-animate">gallery</a>
+    <a data-aos="zoom-in-left" data-aos-delay="1150" href="http://localhost:63342/web222/reviews" class="aos-init aos-animate">reviews</a>
+  </nav>
+
+  <a data-aos="zoom-in-left" data-aos-delay="1500" href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#book-form" class="btn aos-init aos-animate">book now</a>
+  <a data-aos="zoom-in-left" data-aos-delay="1700" href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#Login" class="btn aos-init aos-animate"> Login</a>
+</header>
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <center>  <img src="ima-20230514T091938Z-001/ima/s13.jpg" style="width:70%"> </center>
+
+    <div class="text"></div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <center>  <img src="ima-20230514T091938Z-001/ima/s21.jpg" style="width:70%"> </center>
+
+    <div class="text"></div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <center>  <img src="ima-20230514T091938Z-001/ima/sl.jpg" style="width:70%"> </center>
+
+    <div class="text"></div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <center>  <img src="ima-20230514T091938Z-001/ima/ss.jpg " style="width:70%"> </center>
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <center>  <img src="ima-20230514T091938Z-001/ima/ss66.jpg" style="width:70%"> </center>
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <center>  <img src="ima-20230514T091938Z-001/ima/s44.jpg" style="width:70%"> </center>
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <center>   <img src="ima-20230514T091938Z-001/ima/sa.jpg" style="width:70%"> </center>
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <center>    <img src="ima-20230514T091938Z-00/ima/s11.jpg" style="width:70%"> </center>
+    <div class="text"></div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <center>    <img src="ima-20230514T091938Z-001/ima/ss66.jpg" style="width:70%"> </center>
+    <div class="text"></div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <center>    <img src="ima-20230514T091938Z-001/ima/s111jpg.jpg" style="width:70%"> </center>
+    <div class="text"></div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <center>    <img src="ima-20230514T091938Z-001/ima/s211.jpg" style="width:70%"> </center>
+    <div class="text"></div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <center>    <img src="ima-20230514T091938Z-001/ima/sw.jpg" style="width:70%"> </center>
+    <div class="text"></div>
+  </div>
+
+
+
+</div>
+
+
+
+
+
+<div  class="j" style="text-align:center" >
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span>
+  <span class="dot" onclick="currentSlide(10)"></span>
+  <span class="dot" onclick="currentSlide(11)"></span>
+  <span class="dot" onclick="currentSlide(12)"></span>
+</div>
+
+
+<h2></h2>
+<div class="jj"><p class="animate-charcter" style="font-size: 25px ; margin-left: 800px  "> <b>Mausoleum of Mausolus </b>
+</p></div>
+<div class="lk">
+  <p class="visible_text" style="font-size: 14px"><b>The mausoleum of Mausolus is located in the center of the tourist city of Bodrum ,was a tomb built between 353 and 350 BC in Halicarnassus for Mausolus, an Anatolian from Caria and a satrap in the Achaemenid Empire<span style="color: coral"> ....</span> </b></p>
+  <p  class="non_visible_text" style="font-size: 20px;width: 400px"> whose name was Halicarnassus in the fourth century BC, which tourists from all walks of life visit to enjoy all its enormous natural or archaeological facilities.The story of the mausoleum of Mausolus
+    The ancient accounts go back to the fact that Artemis II, the wife of the Greek Prince Mausolus, built this high mausoleum with relief inscriptions and the most impressive architectural designs after his death.
+
+    As the mausoleum of Mausolus in Bodrum cost a lot of money and dozens of years of work by the greatest skilled Greek engineers and sculptors who were brought in by the queen.In the 4th century BC, Halicarnassus was the capital of a small regional kingdom of Caria within the Achaemenid Empire on the western coast of Asia Minor.
+
+
+  </p>
+
+  <button type="text" class="learnBtn">see more</button>
+</div>
+<section class="footer">
+
+  <div class="box-container">
+
+    <div class="box aos-init" data-aos="fade-up" data-aos-delay="150">
+      <a href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#" class="logo"> <i class="fas fa-paper-plane"></i>travel </a>
+      <p>Connect with us</p>
+      <div class="share">
+        <a href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#" class="fab fa-facebook-f"></a>
+        <a href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#" class="fab fa-twitter"></a>
+        <a href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#" class="fab fa-instagram"></a>
+
+      </div>
+    </div>
+
+    <div class="box aos-init" data-aos="fade-up" data-aos-delay="300">
+      <h3>quick links</h3>
+      <a href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#home" class="links"> <i class="fas fa-arrow-right"></i> home </a>
+      <a href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#about" class="links"> <i class="fas fa-arrow-right"></i> about </a>
+      <a href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#destination" class="links"> <i class="fas fa-arrow-right"></i> destination </a>
+      <a href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#services" class="links"> <i class="fas fa-arrow-right"></i> services </a>
+      <a href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#gallery" class="links"> <i class="fas fa-arrow-right"></i> gallery </a>
+      <a href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#review" class="links"> <i class="fas fa-arrow-right"></i> reviews </a>
+    </div>
+
+    <div class="box aos-init" data-aos="fade-up" data-aos-delay="450">
+      <h3>contact info</h3>
+      <p> <i class="fas fa-map-marker-alt"></i> Palestine</p>
+      <p> <i class="fas fa-phone"></i> +970-567-123 </p>
+      <p> <i class="fas fa-envelope"></i> travel.site@gmail.com </p>
+      <p> <i class="fas fa-clock"></i> 8:00am - 9:00pm </p>
+    </div>
+
+    <div class="box aos-init" data-aos="fade-up" data-aos-delay="600">
+      <h3>newsletter</h3>
+      <p>subscribe for latest updates</p>
+      <form action="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE">
+        <input type="email" name="" placeholder="enter your email" class="email" id="">
+        <input type="submit" value="subscribe" class="btn">
+      </form>
+    </div>
+
+  </div>
+
+
+</section>
+
+
+
+<!-- footer section ends -->
+
+
+<script>
+  let slideIndex = 0;
+  showSlides();
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 3500); // Change image every 2 seconds
+  }
+  var myButton    = document.querySelector(".learnBtn");
+  var text2toggle = document.querySelector(".non_visible_text");
+
+  myButton.addEventListener("click", function() {
+    if ((myButton.textContent === "see more")) {
+      text2toggle.style.display = "block";
+      myButton.textContent = "see less";
+    } else {
+      text2toggle.style.display = "none";
+      myButton.textContent = "see more";
+    }
+  });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <style>
+
+
+        body{
+            border: 100px ;
+            padding: 50px;
+            margin: 20px;
+            background: white;
+            margin: 20px;
+
+        }
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            text-transform: capitalize;
+            -webkit-transition: all .2s linear;
+            transition: all .2s linear;
+        }
+
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            scroll-padding-top: 9rem;
+        }
+
+        html::-webkit-scrollbar {
+            width: 1rem;
+        }
+
+        html::-webkit-scrollbar-track {
+            background:#D3D3D3;
+        }
+
+        html::-webkit-scrollbar-thumb {
+            background:coral;
+            border-radius: 5rem;
+        }
+
+        body {
+            background: white;
+            overflow-x: hidden;
+        }
+
+        section {
+            padding: 3rem 9%;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .heading span {
+            color: coral;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .heading h1 {
+            font-size: 4rem;
+            color: black;
+        }
+
+        .gg{
+            margin-top: 200px;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: 	#505050;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            padding: 1.5rem 9%;
+        }
+
+        .header .navbar a {
+            font-size: 1.7rem;
+            color: white;
+            display: inline-block;
+            margin: 0 1rem;
+        }
+
+        .header .navbar a:hover {
+            color: coral;
+        }
+
+        .header .btn {
+            margin-top: 0;
+            margin-right:-120px;
+            margin-left:-180px;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            color: #fff;
+            font-weight: bolder;
+        }
+
+        .logo i {
+            color: coral;
+            padding-right: .5rem;
+        }
+
+        #menu-btn {
+            font-size: 2.5rem;
+            color: #fff;
+            cursor: pointer;
+            display: none;
+        }
+
+
+        .about {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 5rem;
+        }
+
+        .about .video-container {
+            -webkit-box-flex: 1;
+            -ms-flex: 1 1 42rem;
+            flex: 1 1 42rem;
+        }
+
+        .about .video-container video {
+            border-radius: 1rem;
+            width: 100%;
+        }
+
+        .about .video-container .controls {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .about .video-container .controls span {
+            display: inline-block;
+            height: 2rem;
+            width: 2rem;
+            border-radius: 50%;
+            background: #A0A0A0;
+            cursor: pointer;
+            margin: .7rem;
+        }
+
+        .about .video-container .controls span:hover {
+            background: coral;
+        }
+
+        .about .content {
+            -webkit-box-flex: 1;
+            -ms-flex: 1 1 42rem;
+            flex: 1 1 42rem;
+            margin-bottom: 5rem;
+        }
+
+        .about .content span {
+
+            color: coral;
+            font-size: 2rem;
+        }
+        about .content h2 {
+            color: black;
+            font-size: 4rem;
+            margin-top: .5rem;
+        }
+        .about .content h3 {
+            color: black;
+            font-size: 4rem;
+            margin-top: .5rem;
+        }
+
+        .about .content p {
+            padding: 1rem 0;
+            font-size: 1.4rem;
+            color: #aaa;
+            line-height: 2;
+        }
+
+        .footer{
+            margin-top: 430px;
+
+        }
+        .footer .box-container {
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+            gap: 1.5rem;
+        }
+
+        .footer .box-container .box {
+            padding: 1rem 0;
+        }
+
+        .footer .box-container .box .logo {
+            padding-bottom: 1rem;
+        }
+
+        .footer .box-container .box h3 {
+            font-size: 2.2rem;
+            color: black;
+            padding: 1rem 0;
+        }
+
+        .footer .box-container .box p {
+            font-size: 1.4rem;
+            color: black;
+            padding: 1rem 0;
+            line-height: 2;
+        }
+
+        .footer .box-container .box p i {
+            padding-right: .5rem;
+            color:coral;
+        }
+
+        .footer .box-container .box .share {
+            padding-top: 1rem;
+        }
+
+        .footer .box-container .box .share a {
+            height: 4.5rem;
+            width: 4.5rem;
+            line-height: 4rem;
+            font-size: 2rem;
+            border-radius: 50%;
+            font-size: 1.7rem;
+            border: 0.2rem solid coral;
+            color: coral;
+            margin-right: .5rem;
+            text-align: center;
+        }
+
+        .footer .box-container .box .share a:hover {
+            background: coral;
+            color: #111;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .footer .box-container .box .links {
+            font-size: 1.4rem;
+            color: #aaa;
+            padding: 1rem 0;
+            display: block;
+        }
+
+        .footer .box-container .box .links:hover {
+            color: coral;
+        }
+
+        .footer .box-container .box .links:hover i {
+            padding-right: 2rem;
+        }
+
+        .footer .box-container .box .links i {
+            padding-right: .5rem;
+            color: coral;
+        }
+
+        .footer .box-container .box form .email {
+            width: 100%;
+            border-radius: 5rem;
+            border: 0.2rem solid coral;
+            background: none;
+            font-size: 1.5rem;
+            text-transform: none;
+            color: #aaa;
+            margin-bottom: 1rem;
+            padding: 1.2rem 1.4rem;
+        }
+
+        .credit {
+            background: #222;
+            text-align: center;
+            font-size: 2rem;
+            padding: 2rem 1rem;
+            color: #aaa;
+        }
+
+        .credit span {
+            color:coral;
+        }
+        .rating-box {
+            margin: auto;
+            width: 50%;
+            position: relative;
+            background: #fff;
+            padding: 25px 50px 35px;
+            border-radius: 25px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+        }
+        .rating-box header {
+            font-size: 22px;
+            color: gray;
+            font-weight: 500;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .rating-box .stars {
+            margin: auto;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+
+
+        .btn {
+            margin-top: 1rem;
+            display: inline-block;
+            padding: 1rem 3rem;
+            font-size: 1.7rem;
+            color: coral;
+            border: 0.2rem solid coral;
+            border-radius: 5rem;
+            cursor: pointer;
+
+            background: none;
+        }
+
+        .btn:hover {
+            background: coral;
+            color: white;
+        }
+        @media (max-width: 991px) {
+            html {
+                font-size: 55%;
+            }
+            .header {
+                padding: 1.5rem 2rem;
+            }
+            section {
+                padding: 3rem 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #menu-btn {
+                display: inline-block;
+            }
+            .header .navbar {
+                position: absolute;
+                top: 99%;
+                left: 0;
+                right: 0;
+                background: #222;
+                -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            }
+            .header .navbar.active {
+                -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+            .header .navbar a {
+                margin: 2rem;
+                font-size: 2rem;
+                display: block;
+            }
+            .home {
+                margin-top: 10rem;
+            }
+            .home .content span {
+                font-size: 8vw;
+            }
+            .home .content h3 {
+                font-size: 9vw;
+            }
+        }
+
+        @media (max-width: 450px) {
+            html {
+                font-size: 50%;
+            }
+            .about .content h3 {
+                font-size: 3.5rem;
+            }
+            .banner .content h3 {
+                font-size: 2.7rem;
+            }
+        }
+
+
+        .animate-charcter
+        {
+            margin-top : 40px;
+            text-transform: uppercase;
+            background-image: linear-gradient(
+                    -225deg,
+                    lightcoral 0%,
+                    burlywood 29%,
+                    coral 67%,
+                    black 100%
+            );
+            background-size: auto auto;
+            background-clip: border-box;
+            background-size: 200% auto;
+            color: #fff;
+            background-clip: text;
+            text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 1s linear infinite;
+            display: inline-block;
+            font-size: 50px;
+            width: 900px;
+        }
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .prev, .next,.text {font-size: 11px}
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        .mySlides1 {display: none;
+            margin-left :10%;
+            margin-top: 10px;
+        }
+        img {vertical-align: middle;
+            length: 300px;
+            margin-top: 70px;
+            height: 170px;
+            width: 500px;}
+
+        /* Slideshow container */
+        .slideshow-container1 {
+            max-width: 1000px;
+            position: relative;
+            margin-right: 80%;
+            margin-bottom: 5px;
+
+
+        }
+
+        /* Next & previous buttons */
+        .prev1, .next1 {
+            cursor: pointer;
+            position: absolute;
+
+
+            width: auto;
+            padding: 8px;
+            margin-top: -20px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+
+        .next1 {
+            right:0px;
+            border-radius: 3px 0 0 10px;
+            top : 150px;
+        }
+
+
+        .prev1{
+            top : 100px;
+            left: 42px;
+        }
+        /* On hover, add a black background color with a little bit see-through */
+        .prev1:hover, .next1:hover {
+            background-color: #bbb;
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+
+        /* The dots/bullets/indicators */
+        .dot1 {
+            cursor: pointer;
+            height: 10px;
+            width: 10px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 80%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+
+        .active, .dot1:hover {
+            background-color: #717171;
+        }
+
+
+
+        /* Fading animation */
+
+        /* On smaller screens, decrease text size */
+        .mn1{
+            text-align: center;
+            margin-top: -10%;
+        }
+
+
+        .lo1{
+            margin-top: -150px;
+            margin-right: -700px;
+            font-family: Impact;
+            background-image: -webkit-linear-gradient(coral 50%, black);
+            background-size: 30% 50px;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-animation: stripes 2s linear infinite;
+            animation: stripes 2s linear infinite;
+            font-size: 30px;
+        }
+        @-webkit-keyframes stripes {
+            100% {
+                background-position: 0 -40px;
+            }
+        }
+
+
+
+
+        .checked1 {
+            color: orange;
+
+
+        }
+        .ch1{
+            margin-top: -100px;
+            margin-right: -1300px;
+
+        }
+        .r1{
+            margin-top: -15px;
+            margin-right: -175px;
+        }
+
+
+
+        .mySlides {display: none;
+            margin-left :10%;
+        }
+        img {vertical-align: middle;
+            length: 20px;}
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin-right: 80%;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+
+
+            width: auto;
+            padding: 8px;
+            margin-top: -20px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+
+        .next {
+            right:0px;
+            border-radius: 3px 0 0 10px;
+            top : 150px;
+        }
+
+
+        .prev{
+            top : 120px;
+            left: 42px;
+        }
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+            background-color: #bbb;
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 10px;
+            width: 10px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 80%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+
+
+
+        /* Fading animation */
+
+        /* On smaller screens, decrease text size */
+        .mn{
+            text-align: center;
+            margin-top: -10%;
+        }
+
+
+        .lo{
+            margin-top: -170px;
+            margin-right: -700px;
+
+            font-family: Impact;
+            background-image: -webkit-linear-gradient(coral 50%, black);
+            background-size: 30% 50px;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-animation: stripes 2s linear infinite;
+            animation: stripes 2s linear infinite;
+            font-size: 30px;
+        }
+        @-webkit-keyframes stripes {
+            100% {
+                background-position: 0 -40px;
+            }
+        }
+        .rr{
+
+            margin-left: 250px;
+        }
+
+        .checked {
+            color: orange;
+
+
+        }
+        .ch{
+            margin-top: -130px;
+            margin-right: -1300px;
+
+        }
+        .r{
+            margin-top: -12px;
+            margin-right: -165px;
+        }
+
+        .mySlides2 {display: none;
+            margin-left :10%;
+
+        }
+        img {vertical-align: middle;
+            length: 20px;}
+
+        /* Slideshow container */
+        .slideshow-container2 {
+            max-width: 1000px;
+            position: relative;
+            margin-right: 80%;
+            margin-top: 2px;
+            margin-bottom: 5px;
+        }
+        .s3{
+            margin-left: -1000px;
+            color: orange;
+        }
+
+        /* Next & previous buttons */
+        .prev2, .next2 {
+            cursor: pointer;
+            position: absolute;
+
+
+            width: auto;
+            padding: 8px;
+            margin-top: -20px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+
+        .next2 {
+            right:0px;
+            border-radius: 3px 0 0 10px;
+            top : 150px;
+        }
+
+
+        .prev2{
+            top : 100px;
+            left: 42px;
+        }
+        /* On hover, add a black background color with a little bit see-through */
+        .prev2:hover, .next2:hover {
+            background-color: #bbb;
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+
+        /* The dots/bullets/indicators */
+        .dot2 {
+            cursor: pointer;
+            height: 10px;
+            width: 10px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 80%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+
+        .active, .dot2:hover {
+            background-color: #717171;
+        }
+
+
+
+        /* Fading animation */
+
+        /* On smaller screens, decrease text size */
+        .mn2{
+            text-align: center;
+            margin-top: -10%;
+        }
+
+
+        .lo2{
+            margin-top: -160px;
+            margin-right: -700px;
+
+            font-family: Impact;
+            background-image: -webkit-linear-gradient(coral 50%, black);
+            background-size: 30% 50px;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-animation: stripes 2s linear infinite;
+            animation: stripes 2s linear infinite;
+            font-size: 30px;
+        }
+        @-webkit-keyframes stripes {
+            100% {
+                background-position: 0 -40px;
+            }
+        }
+
+
+        .checked2 {
+            color: orange;
+
+
+        }
+        .s3{
+            margin-left: 1000px;
+        }
+        .ch2{
+            margin-top: -115px;
+            margin-right: -1300px;
+
+        }
+        .r2{
+            margin-top: 15px;
+            margin-right: -160px;
+        }
+
+
+        .mySlides3 {display: none;
+            margin-left :10%;
+        }
+        img {vertical-align: middle;
+            length: 20px;}
+
+        /* Slideshow container */
+        .slideshow-container3 {
+            max-width: 1000px;
+            position: relative;
+            margin-right: 80%;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        /* Next & previous buttons */
+        .prev3, .next3 {
+            cursor: pointer;
+            position: absolute;
+
+
+            width: auto;
+            padding: 8px;
+            margin-top: -20px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .mySlides1:hover{
+            margin-left :10%;
+            width: 120%;
+
+            margin-top: -2px;
+        }
+        .mySlides:hover{
+            margin-left :10%;
+            width: 120%;
+
+            margin-top: -2px;
+        }
+        .mySlides3:hover{
+            margin-left :10%;
+            width: 120%;
+
+            margin-top: -2px;
+        }
+        .mySlides2:hover{
+            margin-left :10%;
+            width: 120%;
+
+            margin-top: -2px;
+        }
+
+        /* Position the "next button" to the right */
+
+        .next3 {
+            right:0px;
+            border-radius: 3px 0 0 10px;
+            top : 150px;
+        }
+
+
+        .prev3{
+            top : 100px;
+            left: 42px;
+        }
+        /* On hover, add a black background color with a little bit see-through */
+        .prev3:hover, .next3:hover {
+            background-color: #bbb;
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+
+        /* The dots/bullets/indicators */
+        .dot3 {
+            cursor: pointer;
+            height: 10px;
+            width: 10px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 80%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+
+        .active, .dot3:hover {
+            background-color: #717171;
+        }
+
+
+        .stars i {
+            color: #e6e6e6;
+            font-size: 35px;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+        .stars i.active {
+            color: #ff9c1a;
+        }
+
+        /* Fading animation */
+
+        /* On smaller screens, decrease text size */
+        .mn3{
+            text-align: center;
+            margin-top: -10%;
+        }
+
+
+        .lo3{
+            margin-top: -140px;
+            margin-right: -700px;
+
+            font-family: Impact;
+            background-image: -webkit-linear-gradient(coral 50%, black);
+            background-size: 30% 50px;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-animation: stripes 2s linear infinite;
+            animation: stripes 2s linear infinite;
+            font-size: 30px;
+        }
+        @-webkit-keyframes stripes {
+            100% {
+                background-position: 0 -40px;
+            }
+        }
+
+
+        .checked3 {
+            color: orange;
+
+
+
+
+        }
+        .ch3{
+            margin-top: -90px;
+            margin-right: -1300px;
+
+        }
+        .r3{
+            margin-top: -30px;
+            margin-right: -160px;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+<header class="header">
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <a data-aos="zoom-in-left" data-aos-delay="150" href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#" class="logo aos-init aos-animate"> <i class="fas fa-suitcase-rolling"></i>travel </a>
+
+    <nav class="navbar">
+        <a data-aos="zoom-in-left" data-aos-delay="300" href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#home" class="aos-init aos-animate">home</a>
+        <a data-aos="zoom-in-left" data-aos-delay="450" href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#about" class="aos-init aos-animate">about</a>
+        <a data-aos="zoom-in-left" data-aos-delay="600" href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#destination" class="aos-init aos-animate">destination</a>
+        <a data-aos="zoom-in-left" data-aos-delay="750" href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#services" class="aos-init aos-animate">services</a>
+        <a data-aos="zoom-in-left" data-aos-delay="900" href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#gallery" class="aos-init aos-animate">gallery</a>
+        <a data-aos="zoom-in-left" data-aos-delay="1150" href="http://localhost:63342/web222/reviews" class="aos-init aos-animate">reviews</a>
+    </nav>
+
+    <a data-aos="zoom-in-left" data-aos-delay="1500" href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#book-form" class="btn aos-init aos-animate">book now</a>
+    <a data-aos="zoom-in-left" data-aos-delay="1700" href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#Login" class="btn aos-init aos-animate"> Login</a>
+</header>
+
+
+<center><h3 class=" animate-charcter "style="margin-left: 140px" >  HOTEL BOOKING</h3></center>
+
+<div class="rr">
+
+
+
+
+
+    <div class="all" style="width: 1200px; margin: 0 auto; background:white; ">
+
+
+        <div class="slideshow-container1">
+
+            <div class="mySlides1 fade">
+
+                <img src="ima-20230514T091938Z-001/ima/147677692.jpg" style="width:100%">
+
+            </div>
+
+            <div class="mySlides1 fade">
+
+                <img src="ima-20230514T091938Z-001/ima/198260837.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides1 fade">
+
+                <img src="ima/ima/expediav2-2691842-1356555554-694023.jpg" style="width:100%">
+
+            </div>
+            <div class="mySlides1 fade">
+
+                <img src="ima-20230514T091938Z-001/ima/A9fasSEXB1vAL3g480x360.jpg" style="width:100%">
+
+            </div>
+            <div class="mySlides1 fade">
+
+                <img src="ima-20230514T091938Z-001/ima/147679061.jpg" style="width:100%">
+
+            </div>
+
+
+
+            <div class="mn1" style="text-align:center  ">
+                <span class="dot1" onclick="currentSlide1(1)"></span>
+                <span class="dot1" onclick="currentSlide1(2)"></span>
+                <span class="dot1" onclick="currentSlide1(3)"></span>
+                <span class="dot1" onclick="currentSlide1(4)"></span>
+                <span class="dot1" onclick="currentSlide1(5)"></span>
+
+
+
+
+
+                <a class="next1" onclick="plusSlides1(1)">></a>
+
+                <a style="color: coral"   href="https://www.tripadvisor.com/" >
+                    <div class= "lo1" style="font-size: 23px" > <b>  Richmond Ephesus Resort </b>  </div> </a>
+                <div class="ch1">
+                    <span class="fa fa-star checked1"></span>
+                    <span class="fa fa-star checked1"></span>
+                    <span class="fa fa-star checked1"></span>
+                    <span class="fa fa-star checked1"></span>
+                    <span class="fa fa-star checked1 "></span>
+                    <h6 class="r1" style="font-size: 15px" >200 review</h6>
+                    <h6 class="n1" style="font-size: 12px" >Cycling </h6>
+                    <h6 class="n2 " style="font-size: 12px" >Boating</h6>
+                    <h6 class="n3" style="font-size: 12px" >Swimming</h6>
+                    <h6 class="n4" style="font-size: 12px" >Parking</h6>
+
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <hr>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+
+                <img src="ima-20230514T091938Z-001/ima/OIP999.jpg" style="width:100%">
+
+            </div>
+
+            <div class="mySlides fade">
+
+                <img src="ima-20230514T091938Z-001/ima/09877download.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+
+                <img src="ima-20230514T091938Z-001/ima/098download.jpg" style="width:100%">
+
+            </div>
+            <div class="mySlides fade">
+
+                <img src="ima-20230514T091938Z-001/ima/555download.jpg" style="width:100%">
+
+            </div>
+            <div class="mySlides fade">
+
+                <img src="ima-20230514T091938Z-001/ima/00download.jpg" style="width:100%">
+
+            </div>
+
+
+            <div class="mn" style="text-align:center  ">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+
+
+
+
+
+                <a class="next" onclick="plusSlides(1)">></a>
+
+                <a style="color: coral"  href="https://www.tripadvisor.com/" >
+                    <div class= "lo" style="font-size: 23px" > <b>   Ephesus Hitit Hotel restaurant</b>  </div> </a>
+
+                <div class="ch">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star  "></span>
+                    <h6 class="r" style="font-size: 15px" >90 reviews</h6>
+                    <h6 style="font-size: 12px" >Swimming</h6>
+                    <h6 style="font-size: 12px" > Free Wifi </h6>
+                    <h6 style="font-size: 12px" >Restaurant</h6>
+                    <h6 style="font-size: 12px" >Parking </h6>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <hr class="m1">
+        <div class="slideshow-container2">
+
+            <div class="mySlides2 fade">
+
+                <img src="ima-20230514T091938Z-001/ima/09877download.jpg" style="width:100%">
+
+            </div>
+
+            <div class="mySlides2 fade">
+
+                <img src="ima-20230514T091938Z-001/ima/430321446.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides2 fade">
+
+                <img src="ima-20230514T091938Z-001/ima/OIP999.jpg" style="width:100%">
+
+            </div>
+            <div class="mySlides2 fade">
+
+                <img src="ima-20230514T091938Z-001/ima/OIP0000.jpg" style="width:100%">
+
+            </div>
+            <div class="mySlides2 fade">
+
+                <img src="ima/ima/OIP777.jpg" style="width:100%">
+
+            </div>
+
+
+
+            <div class="mn2" style="text-align:center  ">
+                <span class="dot2" onclick="currentSlide2(1)"></span>
+                <span class="dot2" onclick="currentSlide2(2)"></span>
+                <span class="dot2" onclick="currentSlide2(3)"></span>
+                <span class="dot2" onclick="currentSlide2(4)"></span>
+                <span class="dot2" onclick="currentSlide2(5)"></span>
+
+
+
+
+
+                <a class="next2" onclick="plusSlides2(1)">></a>
+
+                <a  style="color: coral" href="https://www.tripadvisor.com/" >
+                    <div class= "lo2" style="font-size: 24px"> <b> Amazon Antique hotel </b>  </div> </a>
+                <div class="ch2">
+                    <span class="fa fa-star checked2"></span>
+                    <span class="fa fa-star checked2"></span>
+                    <span class="fa fa-star checked2"></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star  "></span>
+                    <h6 class="r2" style="font-size: 12px;margin-top: -8px" >40 review</h6>
+                    <h6 class="n1" style="font-size: 12px" >Free parking</h6>
+                    <h6 class="n2 " style="font-size: 12px" > high speeed Wifi </h6>
+                    <h6 class="n3" style="font-size: 12px" >Free breakfas</h6>
+                    <h6 style="font-size: 12px" >Swimming</h6>
+
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <hr>
+
+        <div class="slideshow-container3">
+
+            <div class="mySlides3 fade">
+
+                <img src="ima-20230514T091938Z-001/ima/6a071e9b_z.jpg" style="width:100%">
+
+            </div>
+
+            <div class="mySlides3 fade">
+
+                <img src="ima-20230514T091938Z-001/ima/n22.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides3 fade">
+
+                <img src="ima-20230514T091938Z-001/ima/47275145.jpg" style="width:100%">
+
+            </div>
+            <div class="mySlides3 fade">
+
+                <img src="ima-20230514T091938Z-001/ima/AQXpQw6T12kbFGw480x360.jpg" style="width:100%">
+
+            </div>
+            <div class="mySlides3 fade">
+
+                <img src="ima-20230514T091938Z-001/ima/47274355.jpg" style="width:100%">
+
+            </div>
+
+
+
+
+            <div class="mn3" style="text-align:center  ">
+                <span class="dot3" onclick="currentSlide3(1)"></span>
+                <span class="dot3" onclick="currentSlide3(2)"></span>
+                <span class="dot3" onclick="currentSlide3(3)"></span>
+                <span class="dot3" onclick="currentSlide3(4)"></span>
+                <span class="dot3" onclick="currentSlide3(5)"></span>
+
+
+
+
+
+                <a class="next3" onclick="plusSlides3(1)">></a>
+
+                <a  style="color: coral" href="https://www.tripadvisor.com/" >
+                    <div class= "lo3" style="font-size: 25px"> <b>   Akman Hotel </b>  </div> </a>
+                <div class="ch3">
+                    <span class="fa fa-star checked3"></span>
+                    <span class="fa fa-star checked3"></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star "></span>
+
+
+
+                    <h6 style="font-size: 12px" >Parking</h6>
+
+                    <h6 style="font-size: 12px"  > Free Wifi </h6>
+                    <h6 style="font-size: 12px" > Swimming </h6>
+                    <h6 class="r3" style="font-size: 15px;margin-top: -55px">23 review</h6>
+                </div>
+
+            </div>
+        </div>
+
+        <br>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <section class="footer">
+
+    <div class="box-container">
+
+        <div class="box aos-init" data-aos="fade-up" data-aos-delay="150">
+            <a href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#" class="logo"> <i class="fas fa-paper-plane"></i>travel </a>
+            <p>Connect with us</p>
+            <div class="share">
+                <a href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#" class="fab fa-facebook-f"></a>
+                <a href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#" class="fab fa-twitter"></a>
+                <a href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#" class="fab fa-instagram"></a>
+
+            </div>
+        </div>
+
+        <div class="box aos-init" data-aos="fade-up" data-aos-delay="300">
+            <h3>quick links</h3>
+            <a href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#home" class="links"> <i class="fas fa-arrow-right"></i> home </a>
+            <a href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#about" class="links"> <i class="fas fa-arrow-right"></i> about </a>
+            <a href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#destination" class="links"> <i class="fas fa-arrow-right"></i> destination </a>
+            <a href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#services" class="links"> <i class="fas fa-arrow-right"></i> services </a>
+            <a href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#gallery" class="links"> <i class="fas fa-arrow-right"></i> gallery </a>
+            <a href="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE#review" class="links"> <i class="fas fa-arrow-right"></i> reviews </a>
+        </div>
+
+        <div class="box aos-init" data-aos="fade-up" data-aos-delay="450">
+            <h3>contact info</h3>
+            <p> <i class="fas fa-map-marker-alt"></i> Palestine</p>
+            <p> <i class="fas fa-phone"></i> +970-567-123 </p>
+            <p> <i class="fas fa-envelope"></i> travel.site@gmail.com </p>
+            <p> <i class="fas fa-clock"></i> 8:00am - 9:00pm </p>
+        </div>
+
+        <div class="box aos-init" data-aos="fade-up" data-aos-delay="600">
+            <h3>newsletter</h3>
+            <p>subscribe for latest updates</p>
+            <form action="http://localhost:63342/web222/dubai.html?_ijt=bqg5pqfkgaorv22ejf8di16p4q&amp;_ij_reload=RELOAD_ON_SAVE">
+                <input type="email" name="" placeholder="enter your email" class="email" id="">
+                <input type="submit" value="subscribe" class="btn">
+            </form>
+        </div>
+
+    </div>
+
+
+</section>
+<script>
+    let slideIndex1 = 1;
+    showSlides1(slideIndex1);
+
+    function plusSlides1(n) {
+        showSlides1(slideIndex1 += n);
+    }
+
+    function currentSlide1(n) {
+        showSlides1(slideIndex1 = n);
+    }
+
+    function showSlides1(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides1");
+        let dots = document.getElementsByClassName("dot1");
+        if (n > slides.length) {slideIndex1 = 1}
+        if (n < 1) {slideIndex1 = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex1-1].style.display = "block";
+        dots[slideIndex1-1].className += " active";
+    }
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+    let slideIndex2 = 1;
+    showSlides2(slideIndex2);
+
+    function plusSlides2(n) {
+        showSlides2(slideIndex2 += n);
+    }
+
+    function currentSlide2(n) {
+        showSlides2(slideIndex2 = n);
+    }
+
+    function showSlides2(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides2");
+        let dots = document.getElementsByClassName("dot2");
+        if (n > slides.length) {slideIndex2 = 1}
+        if (n < 1) {slideIndex2 = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex2-1].style.display = "block";
+        dots[slideIndex2-1].className += " active";
+    }
+    let slideIndex3 = 1;
+    showSlides3(slideIndex3);
+
+    function plusSlides3(n) {
+        showSlides3(slideIndex3 += n);
+    }
+
+    function currentSlide3(n) {
+        showSlides3(slideIndex3 = n);
+    }
+
+    function showSlides3(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides3");
+        let dots = document.getElementsByClassName("dot3");
+        if (n > slides.length) {slideIndex3 = 1}
+        if (n < 1) {slideIndex3 = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex3-1].style.display = "block";
+        dots[slideIndex3-1].className += " active";
+    }
+</script>
+</body>
+</html>
